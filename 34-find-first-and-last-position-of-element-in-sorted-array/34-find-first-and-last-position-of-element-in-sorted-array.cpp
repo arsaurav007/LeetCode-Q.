@@ -64,11 +64,12 @@ int lastOcc(vector<int>& nums, int key){
 
 }
     vector<int> searchRange(vector<int>& nums, int target) {
-        
-        vector<int> v;
-        v.push_back(firstOcc(nums, target));
-        v.push_back(lastOcc(nums, target));
-        
-        return v;
+      int a;
+        a = firstOcc(nums,target);
+        vector<int> ans;
+        ans.push_back(a);
+        a = lastOcc(nums,target);
+        ans.push_back(a);
+        return ans;
     }
 };
